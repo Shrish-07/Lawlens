@@ -1,0 +1,41 @@
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Python (backend) ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# FastAPI app secrets & data
+apps/api/.env
+apps/api/.env.*
+apps/api/lawlens.db
+apps/api/storage/
+apps/api/uploads/
+uploads/               # if uploads are created at project root
+storage/               # if STORAGE_DIR=./storage at root
+
+# Caches (just in case)
+apps/api/.cache/
+.cache/
+
+# --- Node/Next.js (frontend) ---
+apps/web/node_modules/
+apps/web/.next/
+apps/web/out/
+apps/web/.vercel/
+apps/web/.env.local
+apps/web/.env.*
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Misc ---
+*.log
+apps.zip
