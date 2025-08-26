@@ -1,6 +1,7 @@
 # Build tools (must be first so pip can build any packages)
-setuptools>=68.0
+setuptools>=65.0
 wheel
+cython
 
 # Web framework & server
 fastapi==0.111.0
