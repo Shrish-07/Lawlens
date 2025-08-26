@@ -13,4 +13,6 @@ transformers==4.42.4
 torch==2.3.1
 sentence-transformers==3.0.1
 sentencepiece==0.2.0
+psycopg2-binary==2.9.9
+
 
