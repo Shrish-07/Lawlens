@@ -9,7 +9,8 @@ python-jose[cryptography]==3.3.0
 pyjwt==2.9.0
 python-dotenv==1.0.1
 pypdf==4.3.1
-transformers==4.42.4
+transformers==4.41.2
+tokenizers==0.19.1
 torch==2.5.1 --extra-index-url https://download.pytorch.org/whl/cpu
 sentence-transformers==3.0.1
 sentencepiece==0.1.99
