@@ -1,0 +1,4 @@
+buildcommand: |
+  pip install --upgrade pip
+  pip cache purge
+  pip install -r requirements.txt
