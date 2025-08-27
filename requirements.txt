@@ -1,3 +1,4 @@
+--only-binary=:all:
 --extra-index-url https://download.pytorch.org/whl/cpu
 
 fastapi==0.111.0
@@ -12,8 +13,8 @@ pyjwt==2.9.0
 python-dotenv==1.0.1
 pypdf==4.3.1
 torch==2.5.1+cpu
-transformers==4.44.2
-tokenizers==0.19.1
+transformers==4.45.0
+tokenizers==0.20.2 ; platform_machine != "arm64"
 sentence-transformers==3.0.1
 sentencepiece==0.2.1
 psycopg2-binary==2.9.1
