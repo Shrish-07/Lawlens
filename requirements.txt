@@ -17,4 +17,4 @@ transformers==4.45.0
 tokenizers==0.20.2 ; platform_machine != "arm64"
 sentence-transformers==3.0.1
 sentencepiece==0.2.1
-psycopg2-binary==2.9.1
+psycopg2-binary==2.9.10
