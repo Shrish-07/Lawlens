@@ -1,9 +1,8 @@
 from pypdf import PdfReader
 from transformers import pipeline
 
-# Load summarizer once at startup (facebook/bart-large-cnn)
 try:
-    summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+    summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
 except Exception as e:
     summarizer = None
     print("⚠️ Failed to load summarizer:", e)
