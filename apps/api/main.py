@@ -5,8 +5,6 @@ import os
 from fastapi.openapi.utils import get_openapi
 
 from .database import init_db
-from .auth import router as auth_router
-from .pdf import router as pdf_router
 
 load_dotenv()
 init_db()
@@ -27,8 +25,16 @@ app.add_middleware(
 def health():
     return {"ok": True}
 
-app.include_router(auth_router)
-app.include_router(pdf_router)
+
+# ⬇️ Lazy-load routers only after app starts
+@app.on_event("startup")
+async def load_routers():
+    from .auth import router as auth_router
+    from .pdf import router as pdf_router
+
+    app.include_router(auth_router)
+    app.include_router(pdf_router)
+
 
 def custom_openapi():
     if app.openapi_schema:
